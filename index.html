@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <button id="btn" type="button" @click="generateEmailsVue">Generate Mails</button>
+            <div class="emails">
+                <ul id="targetJQ">
+                    <li class="title">JQ</li>
+                </ul>
+                <ul id="targetVue" >
+                    <li class="title">Vue</li>
+                    <li v-for="email in emails">{{email}}</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
